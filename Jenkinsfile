@@ -10,16 +10,23 @@ pipeline {
             }
         }
 
-        stage ('Build') {
+        stage ('Test') {
             steps {
-                 bat 'mvn install -Dmaven.test.skip=true tomcat7:run' 
+                 bat 'mvn test' 
                 // junit 'build/surefire-reports/*.xml'
             }
-            post {
-                success {
-                    echo "hello world" 
-                }
+           
+        }
+        stage ('Build') {
+            steps {
+                 bat 'mvn install -Dmaven.test.skip=truetomcat7:run' 
+                // junit 'build/surefire-reports/*.xml'
             }
+            //post {
+            //    success {
+            //        echo "hello world" 
+            //    }
+           // }
         }
     }
 }
