@@ -18,7 +18,7 @@ pipeline {
            
         }
 		} catch (Exception ex) {
-		    
+		    echo "failed world" 
 		}
       
         stage ('Build') {
