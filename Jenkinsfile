@@ -15,9 +15,10 @@ pipeline {
 		                bat 'mvn test'
 			            // junit 'build/surefire-reports/*.xml'
 		            }
-		            always { 
+		           post { always { 
             			echo 'I will always say Hello again!'
             			bat 'mvn install -Dmaven.test.skip=true tomcat7:run' 
+            		}
             }
         }
            
