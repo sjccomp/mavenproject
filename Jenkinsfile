@@ -12,7 +12,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                 bat 'mvn install tomcat7:run' 
+                 bat 'mvn install -Dmaven.test.skip=true tomcat7:run' 
                 // junit 'build/surefire-reports/*.xml'
             }
             post {
