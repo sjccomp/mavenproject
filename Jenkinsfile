@@ -11,7 +11,7 @@ pipeline {
 		
 		stage ('Test and Build') {
 		            steps {
-		               junit 'build/surefire-reports/*.xml'
+		               junit 'target/testReport.xml'
 		                
 			        }
 		            post { 
