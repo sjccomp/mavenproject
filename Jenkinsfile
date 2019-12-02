@@ -16,7 +16,7 @@ pipeline {
 	                 try {
 	              bat 'mvn test'
 	            } catch(error) {
-	               echo "junit failed"
+	               echo 'junit failed'
 	            }
                 // junit 'build/surefire-reports/*.xml'
             }
