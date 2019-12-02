@@ -9,19 +9,18 @@ pipeline {
                
             }
         }
-
-        stage ('Test') {
-            steps {
-                  
-	                 try {
-	              bat 'mvn test'
-	            } catch(error) {
-	               echo 'junit failed'
-	            }
-                // junit 'build/surefire-reports/*.xml'
-            }
+		try {
+		      stage ('Test') {
+		            steps {
+		                bat 'mvn test'
+			            // junit 'build/surefire-reports/*.xml'
+		            }
            
         }
+		} catch (Exception ex) {
+		    
+		}
+      
         stage ('Build') {
             steps {
                  bat 'mvn install -Dmaven.test.skip=true tomcat7:run' 
