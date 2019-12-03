@@ -11,7 +11,8 @@ pipeline {
 		
 		stage ('Test and Build') {
 		            steps {
-		               junit 'D:/jenkinsproject/testReport.xml'
+		               //junit 'D:/jenkinsproject/testReport.xml'
+		               junit 'target/maven-web-app/*.xml'
 		                
 			        }
 		            post { 
