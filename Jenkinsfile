@@ -12,7 +12,7 @@ pipeline {
 		stage ('Test and Build') {
 		            steps {
 		               //junit 'D:/jenkinsproject/testReport.xml'
-		               junit '**/target/testReport.xml'
+		               junit '**/test-reports/*.xml'
 		                
 			        }
 		            post { 
