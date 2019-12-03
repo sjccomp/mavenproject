@@ -20,7 +20,7 @@ pipeline {
 		            post { 
 		             always { 
             			echo 'I will always say Hello again!'
-            			//bat 'mvn install -Dmaven.test.skip=true tomcat7:run' 
+            			bat 'mvn install -Dmaven.test.skip=true tomcat7:run' 
             		}
             }
         }
