@@ -12,7 +12,9 @@ pipeline {
 		stage ('Test and Build') {
 		            steps {
 		               //junit 'D:/jenkinsproject/testReport.xml'
-		               junit 'D:/jenkinsproject/testReport.xml'
+		               //junit 'D:/jenkinsproject/testReport.xml'
+		               bat 'mvn test'
+		               //junit 'build/surefire-reports/*.xml'
 		                
 			        }
 		            post { 
