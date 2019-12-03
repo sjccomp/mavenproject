@@ -12,12 +12,12 @@ public class SimpleTest {
 				
 	}
 	
-	@Test
-	public void testFail() {
-		int a = 2;
-		int b = 12;
-		assertTrue(a-b == 2);
+// 	@Test
+// 	public void testFail() {
+// 		int a = 2;
+// 		int b = 12;
+// 		assertTrue(a-b == 2);
 				
-	}
+// 	}
 
 }
