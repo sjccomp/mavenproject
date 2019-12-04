@@ -18,7 +18,7 @@ pipeline {
 		               //junit 'build/surefire-reports/*.xml'
 				// sh 'mvn install -Dmaven.test.skip=true tomcat7:run' 
 		                withSonarQubeEnv('sonarqube') {
-    // some block		  sh 'mvn sonar:sonar'	
+    				sh 'mvn sonar:sonar'	
 				}
 			        }
 		            post { 
