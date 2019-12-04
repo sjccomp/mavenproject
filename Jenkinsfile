@@ -16,7 +16,7 @@ pipeline {
 		               //junit 'D:/jenkinsproject/testReport.xml'
 		               //sh 'mvn test'
 		               //junit 'build/surefire-reports/*.xml'
-				 sh 'mvn install -Dmaven.test.skip=true tomcat7:run' 
+				// sh 'mvn install -Dmaven.test.skip=true tomcat7:run' 
 		                withSonarQubeEnv('sonarqube') {
     // some block		  sh 'mvn sonar:sonar'	
 				}
