@@ -14,14 +14,14 @@ pipeline {
 		            steps {
 		               //junit 'D:/jenkinsproject/testReport.xml'
 		               //junit 'D:/jenkinsproject/testReport.xml'
-		               bat 'mvn test'
+		               sh 'mvn test'
 		               //junit 'build/surefire-reports/*.xml'
 		                
 			        }
 		            post { 
 		             always { 
             			echo 'I will always say Hello again!'
-            			bat 'mvn install -Dmaven.test.skip=true tomcat7:run' 
+            			sh 'mvn install -Dmaven.test.skip=true tomcat7:run' 
             		}
             }
         }
