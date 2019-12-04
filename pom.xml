@@ -88,7 +88,7 @@
 		<artifactId>tomcat7-maven-plugin</artifactId>
 		<version>2.2</version>
 		<configuration>
-			<url>http://localhost:8080/manager/text</url>
+			<url>ec2-3-0-104-121.ap-southeast-1.compute.amazonaws.com/manager/text</url>
 			<server>TomcatServer</server>
 			<path>/maven-web-app</path>
 		</configuration>
