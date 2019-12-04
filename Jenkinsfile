@@ -24,8 +24,8 @@ pipeline {
 		            post { 
 		             always { 
             			echo 'I will always say Hello again!'
-				     sh 'sudo su'
-				     sh 'java -jar ./home/centos/jenkinsdemo/ResultExporter.jar ${JOB_NAME} ${BUILD_NUMBER}'
+				    // sh 'sudo su'
+				     sh 'java -jar /home/centos/jenkinsdemo/ResultExporter.jar ${JOB_NAME} ${BUILD_NUMBER}'
             			
 				     
             		}
