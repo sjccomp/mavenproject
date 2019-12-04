@@ -14,14 +14,18 @@ pipeline {
 		            steps {
 		               //junit 'D:/jenkinsproject/testReport.xml'
 		               //junit 'D:/jenkinsproject/testReport.xml'
-		               sh 'mvn test'
+		               //sh 'mvn test'
 		               //junit 'build/surefire-reports/*.xml'
-		                
+				 sh 'mvn install -Dmaven.test.skip=true tomcat7:run' 
+		                withSonarQubeEnv('sonarqube') {
+    // some block		  sh 'mvn sonar:sonar'	
+				}
 			        }
 		            post { 
 		             always { 
             			echo 'I will always say Hello again!'
-            			sh 'mvn install -Dmaven.test.skip=true tomcat7:run' 
+            			
+				     
             		}
             }
         }
