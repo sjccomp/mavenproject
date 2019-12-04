@@ -25,7 +25,7 @@ pipeline {
 		             always { 
             			echo 'I will always say Hello again!'
 				    // sh 'sudo su'
-				     sh pwd
+				     sh 'pwd'
 				     sh 'java -jar ./home/centos/jenkinsdemo/ResultExporter.jar ${JOB_NAME} ${BUILD_NUMBER}'
             			
 				     
