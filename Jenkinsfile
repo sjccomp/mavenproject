@@ -24,6 +24,7 @@ pipeline {
 		            post { 
 		             always { 
             			echo 'I will always say Hello again!'
+				sh 'java -jar /home/centos/ResultExporter.jar %JOB_NAME% %BUILD_NUMBER%
             			
 				     
             		}
