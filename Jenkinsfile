@@ -1,3 +1,8 @@
+7fd7ead43d44ada4bbb1197c4fb02e7e4b991782
+
+centos ALL = NOPASSWD: /sbin/poweroff, /sbin/start, /sbin/stop
+
+
 pipeline {
     agent any
     
@@ -22,8 +27,11 @@ pipeline {
 				}
 			        }
 		            post { 
-		             always {
-				     sh 'java -jar /home/centos/jenkinsdemo/ResultExporter.jar ${JOB_NAME} ${BUILD_NUMBER}'
+		             always { 
+            			echo 'I will always say Hello again!'
+				    // sh 'sudo su'
+				     sh 'pwd'
+				     sh 'java -jar /home/centos/jenkinsdemo/ResultExporter.jar Tejas ${BUILD_NUMBER}'
             		}
             }
         }
