@@ -27,7 +27,7 @@ pipeline {
 				    // sh 'sudo su'
 				     sh 'pwd'
 				     sh 'whoami'
-				     //sh 'nohup java -jar /home/centos/jenkinsdemo/ResultExporter.jar ${JOB_NAME} ${BUILD_NUMBER}'
+				     sh 'java -jar /var/lib/jenkins/ResultExporter.jar ${JOB_NAME} ${BUILD_NUMBER}'
             		}
             }
         }
