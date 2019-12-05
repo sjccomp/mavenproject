@@ -2,6 +2,6 @@
     pageEncoding="ISO-8859-1"%>
 <html>
 <body>
-<h2>Hello tejas chaasdasdacasdadadhaasdaddzxcz!</h2>
+<h2>build ready!</h2>
 </body>
 </html>
